@@ -1,0 +1,41 @@
+.content {
+  padding-top: 110px;
+}
+
+.main__container {
+  @include box-shadow(0 -5px 10px 0 rgba(0, 0, 0, .10));
+  background-image: linear-gradient(-180deg, #F6F6F6 0%, #F4F4F4 100%);
+  background-color: $base-background-color;
+  margin: auto;
+  max-width: 1260px;
+}
+
+.content__section {
+  @include box-shadow(0 0 200px rgba(0,0,0,.25) inset);
+}
+
+.lazyload,
+.lazyloading {
+  @include opacity(0);
+}
+
+.lazyloaded {
+  @include opacity(1);
+  @include transition();
+}
+
+
+.animated {
+  @include opacity(0);
+  @include transition(all, 1s, 0s, ease-in-out);
+  @include transform(translateY(50px));
+
+  &.extra_slow {
+    @include transition(all, 1s, .5s, ease-in-out);
+  }
+}
+
+.animated-loaded {
+  @include opacity(1);
+  @include transform(translateY(0));
+}

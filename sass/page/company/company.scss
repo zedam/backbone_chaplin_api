@@ -1,0 +1,116 @@
+.company__section {
+  margin: 0 auto;
+  max-width: 850px;
+}
+
+.company__main-title {
+  @include ff_open_sans_bold();
+  @include box-sizing();
+  color: $base-footer-color;
+  font-size: 27px;
+  line-height: 34px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+
+  @include respond-to(tablet) {
+    font-size: 48px;
+    line-height: 65px;
+    margin: 50px auto 0;
+  }
+
+  &:after {
+    @include background-size();
+    @include image('layout/shadow_separator.png', 'mobile');
+    content: '';
+    display: block;
+    height: 27px;
+    margin: 30px auto 0;
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+
+    @include respond-to(tablet) {
+      height: 76px;
+      margin: 50px auto 0;
+      max-width: 826px;
+    }
+  }
+}
+
+.company__container {
+  //display: inline-block;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.company-item-list__container {
+  @include box-sizing();
+  margin: auto;
+  max-width: 214px;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    display: inline-block;
+    max-width: 1000px;
+    padding: 20px 34px;
+    width: 33%;
+  }
+}
+
+.company-item-list__link-container {
+  @include box-sizing();
+  padding-bottom: 117%;
+  position: relative;
+  text-align: center;
+  /* padding: 15px; */
+  width: 100%;
+  box-sizing: border-box;
+
+/*  @include respond-to(tablet) {
+    width: 33%;
+  }*/
+}
+
+.company-item-list__link {
+  @include background-size();
+  @include image('layout/logo_background.png', 'mobile');
+ /* display: inline-table;
+  height: 250px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 214px;*/
+
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* margin-bottom: 30px; */
+  /* position: relative; */
+  width: 100%;
+  top: 0;
+}
+
+.company-item-list__image {
+  @include box-sizing();
+  display: table;
+  height: 100%;
+  margin: auto;
+  padding: 40px;
+  position: relative;
+  vertical-align: middle;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+.company-item-list__link-cell {
+  display: table-cell;
+
+  vertical-align: middle;
+}

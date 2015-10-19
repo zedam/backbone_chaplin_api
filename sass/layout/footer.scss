@@ -1,0 +1,64 @@
+body {
+  background: #eee;
+}
+
+footer {
+  @include transition();
+  @include box-sizing();
+  background: $white;
+  float: left;
+  line-height: 60px;
+  width: 100%;
+}
+
+.footer__container {
+  @include box-sizing();
+  height: 60px;
+  margin: auto;
+  max-width: 1220px;
+  padding: 0 20px;
+}
+
+.footer__text {
+  @include opacity(.5);
+  color: $base-footer-color-2;
+  float: left;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.footer__links-container {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    list-style: none;
+  }
+}
+
+.footer__nav--link {
+  @include transition();
+  float: left;
+  color: $base-footer-color;
+  font-size: 13px;
+  line-height: 60px;
+  margin-left: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $base-footer-hover-color;
+  }
+}

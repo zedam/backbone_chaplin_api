@@ -1,0 +1,85 @@
+
+.input__container {
+  float: left;
+  padding-top: 50px;
+  width: 100%;
+
+  label {
+    color: $black;
+    float: left;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    position: relative;
+
+    &.required {
+      &:after {
+        @include image('layout/required_icon.png', 'mobile');
+        content: '';
+        height: 11px;
+        position: absolute;
+        right: -13px;
+        top: 5px;
+        width: 10px;
+      }
+    }
+  }
+
+  input {
+    @include box-shadow( inset 0 1px 5px 0 rgba(0, 0, 0, .50));
+    @include box-sizing();
+    @include ff_open_sans_italic();
+    @include placeholder($base-placeholder-color);
+    background: $white;
+    border: 1px solid $base-grey-color;
+    float: left;
+    font-size: 20px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  textarea {
+    @include box-shadow( inset 0 1px 5px 0 rgba(0, 0, 0, .50));
+    @include box-sizing();
+    @include ff_open_sans_italic();
+    @include placeholder($base-placeholder-color);
+    background: $white;
+    border: 1px solid $base-grey-color;
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    min-height: 186px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.submit__container {
+  float: left;
+  margin: 50px 0;
+  width: 100%;
+}
+
+.action-btn {
+  @include border-radius(4px);
+  @include box-shadow(0 2px 4px rgba(0, 0, 0, .20));
+  @include ff_open_sans_bold();
+  @include transition();
+  background: $base-button-color;
+  color: $white;
+  display: block;
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  margin: 16px auto 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 255px;
+
+  &:hover {
+    @include opacity(.9);
+  }
+}
