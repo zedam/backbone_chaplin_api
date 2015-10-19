@@ -11,7 +11,7 @@ define(['views/base/view', 'text!templates/layout/footer-view.hbs'], function(Ba
       return FooterView.__super__.constructor.apply(this, arguments);
     }
 
-    FooterView.prototype.className = 'footer';
+    FooterView.prototype.className = 'footer animated';
 
     FooterView.prototype.tagName = 'footer';
 

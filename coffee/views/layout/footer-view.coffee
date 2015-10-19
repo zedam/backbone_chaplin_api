@@ -5,7 +5,7 @@ define [
   'use strict'
 
   class FooterView extends BaseView
-    className: 'footer'
+    className: 'footer animated'
     tagName: 'footer'
 
     template: template
