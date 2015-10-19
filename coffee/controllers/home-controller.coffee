@@ -8,7 +8,9 @@ define [
   'models/comment/comment-collection'
   'views/comment/comment-collection-view'
   'views/comment/comment-form-view'
-], (Chaplin, Controller, CarouselCollection, CarouselCollectionView, CompanyCollection, CompanyCollectionView, CommentCollection, CommentCollectionView, CommentFormView) ->
+  'views/about/about-view'
+  'views/blog/blog-view'
+], (Chaplin, Controller, CarouselCollection, CarouselCollectionView, CompanyCollection, CompanyCollectionView, CommentCollection, CommentCollectionView, CommentFormView, AboutView, BlogView) ->
   'use strict'
 
   class ProfileController extends Controller
@@ -31,6 +33,8 @@ define [
     index: ->
       @carouselView = new CarouselCollectionView collection: @reuse('carouselCollection'), region: 'top'
       @companyView = new CompanyCollectionView collection: @reuse('companyCollection'), region: 'main'
+      @aboutView = new AboutView region: 'main'
+      @blogView = new BlogView region: 'main'
       @commentFormView = new CommentFormView region: 'main'
       @commentView = new CommentCollectionView collection: @reuse('commentCollection'), region: 'main'
 

@@ -8,12 +8,6 @@ require ['application', 'routes', 'inview', 'lazysizes', 'lbset'], (Application,
     if (bg)
       e.target.style.backgroundImage = 'url(' + bg + ')'
 
-  $(document).on 'inview', '.animated', (event, isInView, visiblePartX, visiblePartY) ->
-    if (isInView)
-      if (visiblePartY == 'top')
-        $(@).addClass('animated-loaded')
-      else if (visiblePartY == 'bottom')
-      else
 
   $(document).on 'click', '.header__nav--link', (e) ->
     e.preventDefault()

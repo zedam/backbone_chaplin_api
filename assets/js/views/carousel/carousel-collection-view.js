@@ -12,11 +12,8 @@ define(['swiper', 'views/base/collection-view', 'views/carousel/carousel-item-li
     }
 
     CarouselCollectionView.prototype.initialize = function() {
-      CarouselCollectionView.__super__.initialize.apply(this, arguments);
-      return this.on('render', this.onRender);
+      return CarouselCollectionView.__super__.initialize.apply(this, arguments);
     };
-
-    CarouselCollectionView.prototype.onRender = 'rendered';
 
     CarouselCollectionView.prototype.tagName = 'div';
 

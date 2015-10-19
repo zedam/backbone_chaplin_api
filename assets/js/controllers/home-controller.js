@@ -1,7 +1,7 @@
 var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
-define(['chaplin', 'controllers/base/controller', 'models/carousel/carousel-collection', 'views/carousel/carousel-collection-view', 'models/company/company-collection', 'views/company/company-collection-view', 'models/comment/comment-collection', 'views/comment/comment-collection-view', 'views/comment/comment-form-view'], function(Chaplin, Controller, CarouselCollection, CarouselCollectionView, CompanyCollection, CompanyCollectionView, CommentCollection, CommentCollectionView, CommentFormView) {
+define(['chaplin', 'controllers/base/controller', 'models/carousel/carousel-collection', 'views/carousel/carousel-collection-view', 'models/company/company-collection', 'views/company/company-collection-view', 'models/comment/comment-collection', 'views/comment/comment-collection-view', 'views/comment/comment-form-view', 'views/about/about-view', 'views/blog/blog-view'], function(Chaplin, Controller, CarouselCollection, CarouselCollectionView, CompanyCollection, CompanyCollectionView, CommentCollection, CommentCollectionView, CommentFormView, AboutView, BlogView) {
   'use strict';
   var ProfileController;
   return ProfileController = (function(superClass) {
@@ -40,6 +40,12 @@ define(['chaplin', 'controllers/base/controller', 'models/carousel/carousel-coll
       });
       this.companyView = new CompanyCollectionView({
         collection: this.reuse('companyCollection'),
+        region: 'main'
+      });
+      this.aboutView = new AboutView({
+        region: 'main'
+      });
+      this.blogView = new BlogView({
         region: 'main'
       });
       this.commentFormView = new CommentFormView({

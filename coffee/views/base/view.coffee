@@ -22,6 +22,18 @@ define [
       super
 
     afterRender: () =>
+
+      setTimeout ->
+        # CSS animations executed after rendering,
+        # JS could be done instead like GreenSockJS Library
+        $('.animated').each () ->
+          $(@).on 'inview', (event, isInView, visiblePartX, visiblePartY) ->
+            if (isInView)
+              if (visiblePartY == 'top')
+              else if (visiblePartY == 'bottom')
+              else
+                $(@).addClass('animated-loaded')
+      , 100
       @
 
 

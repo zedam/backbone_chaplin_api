@@ -1,8 +1,9 @@
 define [
   'chaplin'
+  'config'
   'backbone'
   'models/base/model'
-], (Chaplin, Backbone, Model) ->
+], (Chaplin, Config, Backbone, Model) ->
 
   class Collection extends Chaplin.Collection
     # Mixin a synchronization state machine.

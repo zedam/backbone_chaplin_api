@@ -2,6 +2,7 @@ API_ROOT_URL = 'https://recruitment.elements.nl:8080/v1/'
 DEBUG = true if typeof DEBUG == 'undefined'
 
 require.config
+
   baseUrl: './assets/js/'
 
   paths:

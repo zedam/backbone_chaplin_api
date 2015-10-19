@@ -35,6 +35,21 @@ define(['handlebars', 'chaplin', 'lib/view-helper'], function(Handlebars, Chapli
     };
 
     View.prototype.afterRender = function() {
+      setTimeout(function() {
+        return $('.animated').each(function() {
+          return $(this).on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+            if (isInView) {
+              if (visiblePartY === 'top') {
+
+              } else if (visiblePartY === 'bottom') {
+
+              } else {
+                return $(this).addClass('animated-loaded');
+              }
+            }
+          });
+        });
+      }, 100);
       return this;
     };
 

@@ -31,6 +31,12 @@
 .carousel-item-list__info-cell {
   display: table-cell;
   vertical-align: middle;
+
+  .action-btn {
+    @include opacity(0);
+    @include transform(translateY(30%));
+    @include transition(all, 1s, 0s, ease-in-out);
+  }
 }
 
 .carousel-item-list__container {
@@ -40,7 +46,7 @@
 .carousel-item-list__title {
   @include ff_open_sans_bold();
   @include opacity(0);
-  @include transform(translateY(2%));
+  @include transform(translateY(30%));
   @include transition(all, 1s, 0s, ease-in-out);
   color: $white;
   font-size: 42px;
@@ -53,13 +59,18 @@
   @include respond-to(tablet) {
     font-size: 64px;
     line-height: 68px;
+    max-width: 800px;
+  }
+
+  @include respond-to(desktop) {
+    max-width: 1000px;
   }
 }
 
 .carousel-item-list__subtitle {
   @include ff_open_sans();
   @include opacity(0);
-  @include transform(translateY(2%));
+  @include transform(translateY(25%));
   @include transition(all, 1s, 0s, ease-in-out);
   font-size: 20px;
   letter-spacing: 5px;
@@ -85,7 +96,7 @@
 }
 
 .swiper-slide-active {
-  .carousel-item-list__subtitle, .carousel-item-list__title {
+  .carousel-item-list__subtitle, .carousel-item-list__title, .action-btn {
     @include opacity(1);
     @include transform(translateY(0));
   }

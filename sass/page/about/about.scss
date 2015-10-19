@@ -1,0 +1,132 @@
+.about-container {
+  background: $base-secondary-background;
+  padding: 50px 0;
+
+  @include respond-to(tablet) {
+    padding: 100px 0 30px;
+  }
+}
+
+.about__city-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.about__city-image {
+  @include background-size();
+  margin-top: 70px;
+  padding-bottom: 43%;
+  position: relative;
+  width: 100%;
+
+  @include respond-to(desktop) {
+    height: 545px;
+    padding-bottom: 0;
+  }
+
+  &.bcn_image {
+    @include image('page/about/bcn_image.jpg', 'mobile');
+  }
+
+  &.almere_image {
+    @include image('page/about/almere_image.jpg', 'mobile');
+  }
+}
+
+.about__city-logo-container {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: -45px;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    top: -140px;
+  }
+}
+
+.about__city-logo {
+  @include background-size();
+  display: inline-block;
+  padding-bottom: 84px;
+  width: 73px;
+
+  @include respond-to(tablet) {
+    padding-bottom: 220px;
+    width: 195px;
+  }
+
+  &.bcn_logo {
+    @include image('page/about/bcn_logo.png', 'mobile');
+  }
+
+  &.alemere_logo {
+    @include image('page/about/almere_logo.png', 'mobile');
+  }
+}
+
+.about__city-info {
+  padding: 40px 20px 0;
+  position: relative;
+
+  @include respond-to(tablet) {
+    padding: 80px 20px 0;
+  }
+}
+
+.about__city-title {
+  @include ff_open_sans_bold();
+  color: $base-footer-color;
+  font-size: 31px;
+  line-height: 34px;
+  text-align: center;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    font-size: 48px;
+    line-height: 65px;
+  }
+}
+
+.about__city-description {
+  display: table;
+
+  @include respond-to(tablet) {
+    border-spacing: 50px;
+  }
+
+  p {
+    color: $base-grey-color-2;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 20px 0 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+
+    @include respond-to(tablet) {
+      display: table-cell;
+      font-size: 24px;
+      line-height: 33px;
+      padding: 0;
+      position: relative;
+      text-align: left;
+      width: 33%;
+
+      & + p {
+        &:after {
+          @include opacity(.15);
+          background: $base-button-color;
+          bottom: 0;
+          content: '';
+          left: -25px;
+          position: absolute;
+          top: 0;
+          width: 1px;
+        }
+      }
+    }
+  }
+}
+
+

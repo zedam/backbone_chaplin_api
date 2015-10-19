@@ -10,9 +10,6 @@ define [
 
     initialize: ->
       super
-      @.on('render', @onRender);
-
-    onRender: 'rendered'
 
     tagName: 'div'
 
